@@ -1,0 +1,587 @@
+Dimensions and Measures-
+Dimensions are fields that are considered as independent variables. Different aggregate functions cannot be applied on them.For eg, colname.It is marked blue
+Measures are field values that are considered as dependent variables. We can apply aggregate functions on them. For eg,col values.It is marked green.
+
+----------
+Q.
+Ceo of the supermarket wants to view-
+1. Category wise sales and profit in a single sheet--------------Category vs Sales and Category vs Profit
+2.State wise sales in US and Canada region-----------Visual Display of State wise sales in US and Canada region
+---------------------Raw sheet of State wise sales in US and Canada region
+3.Monthly sales trends from jan to dec from 2019 ,2020,2021,and 2022 till date.----------Month Sales trends from Jan to Dec from2019 ,2020,till date
+
+--------------
+Different data types in tableau-
+--------------
+text(string values),date values,date and time values,numerical values,Boolean values(relational only),geographical values(using with maps),cluster group
+
+----------------
+Different file typesusedin tableau-
+-----------------
+You can save your work using several different Tableau specific file types: workbooks, bookmarks, packaged data files, data extracts, and data connection files. Each of these file types are described below. For related details, see Save Your Work.
+
+Workbooks (.twb) – Tableau workbook files have the .twb file extension. Workbooks hold one or more worksheets, plus zero or more dashboards and stories.
+
+Bookmarks (.tbm) – Tableau bookmark files have the .tbm file extension. Bookmarks contain a single worksheet and are an easy way to quickly share your work. For more information, see Save a bookmark(Link opens in a new window).
+
+Packaged Workbooks (.twbx) – Tableau packaged workbooks have the .twbx file extension. A packaged workbook is a single zip file that contains a workbook along with any supporting local file data and background images. This format is the best way to package your work for sharing with others who don’t have access to the original data. For more information, see Packaged Workbooks.
+
+Extract (.hyper or .tde) – Depending on the version the extract was created in, Tableau extract files can have either the .hyper or .tde file extension. Extract files are a local copy of a subset or entire data set that you can use to share data with others, when you need to work offline, and improve performance. For more information, see Extract Your Data.
+
+Data Source (.tds) – Tableau data source files have the .tds file extension. Data source files are shortcuts for quickly connecting to the original data that you use often. Data source files do not contain the actual data but rather the information necessary to connect to the actual data as well as any modifications you've made on top of the actual data such as changing default properties, creating calculated fields, adding groups, and so on. For more information, see Save Data Sources.
+
+Packaged Data Source (.tdsx) – Tableau packaged data source files have the .tdsx file extension. A packaged data source is a zip file that contains the data source file (.tds) described above as well as any local file data such as extract files (.hyper or .tde), text files, Excel files, Access files, and local cube files. Use this format to create a single file that you can then share with others who may not have access to the original data stored locally on your computer. For more information, see Save Data Sources.
+
+These files can be saved in the associated folders in the My Tableau Repository directory, which is automatically created in your My Documents folder when you install Tableau. Your work files can also be saved in other locations, such as your desktop or a network directory.
+
+----------------
+coland row shelves-
+-----------------
+Col shelve creates the col of a table.
+Row shelves create the row of a table.
+
+----------
+Marks Card-
+-------------
+
+---------
+Filter shelves-
+---------
+
+----------
+Page Shelves-
+-----------
+
+
+-------------
+Sorting Data--
+------------
+Data cn be sorted invizualization view using-
+1,.Quickly sort from axis,header or field label
+2.sort options while creating viz.
+3.nested sorts 
+
+------------------------------
+What is BI,explain with eg.
+Business Intelligence.It is converting raw data into materialistic data which u can read. 
+
+What is Tableau
+Tableau is software toconvert data into statistical form
+
+Products of tableau
+tableau desktop,tableau public,tableau server-its like tableau online but u can schedule data,u have different teams working on it,
+tablea reader , for reading only-means u cannot modify it, tableau online-with14 day trial, her u cannot create or edit set.
+,tableau prep-for data minimg-data preperation u can say.
+
+Features of tableau
+We can view tableau in mobiles.T
+
+What are different connection used in tableau?
+cloud,csv files, sql,cbquery,excel,db2,  etc.almost 76 connectors 
+
+Difference between Live and Extract connection?
+The changes done in live connection is reflectedin realtime.Extract when we have to manually update the dataset,or we have to set timein advance for changes to reflect
+
+What are dimension and measure?
+Dimension is qualitative with colnames.Measure is quantitative with mean median values
+
+What are different datatypes in tableau?
+String,geographical,time,booleans,clusters,date and time,text
+
+What are different file extension in tableau?
+.twb-workbook,.tbm-bookmark,.twbx-packaged bookmarks,extract-.hyper or.tde,data source-.tds,packaged data source-.tdsx
+
+What are different shelves used in tableau?
+columns,rows,filters and marks cards.Columns and rows we use for visualization.Filter for filtering data,marks cards for modifying visualization.
+
+How tosort data in tableau?
+Data cn be sorted invizualization view using-
+1,.Quickly sort from axis,header or field label
+2.sort options while creating viz.
+3.nested sorts 
+
+
+
+explan blend join and relationship. 
+In blend, we connect 2 different data sources by common col,eg.forcustomer having more than 1 order, it is showing null.
+Also,the measures are aggregated but dimensions are not.
+
+Joins-left,full,right,inner-we get a product table.
+Joining and blending is done on physical part
+
+Relations- Relationships are on logical part.
+
+-------------------------------------------
+
+Groups-Create a group to combine related members in a field.Single labelcan be used tocombine different values.Can beused for both dimension or measure,
+but generally used in dimensions.
+Create a group-1.By selecting data in the view.2.Froma fieldin the datatype.
+
+Assignment-
+Display salesfor product group refrigerator ,phone and clock
+Display sales value whichis less than 5 for category
+Display profit and sales per customer group arranged alphabetically,eg Agroup,b group,etc.
+
+-----------------------------------------------
+
+Set- Set allows us to arange the data and related dimension values together.Create set for dimension only. Set automatically adjust the values either in/out.
+sets are created based on some conditions.
+Types of sets-
+1.Fixed Set
+2.Dynamic Set
+
+In the datapane, right click a dimension and select create>set
+In the create set dialog box,configure ur set-
+1.General- Use the general tab toselect 1 or more values that will be considered when computing the set.
+2.Condition-Use the condition tab to define rules that determine which members to include in the set.
+ 
+Diffrence between Group and Set-
+Group - Fixed(Manual),Single Label,Dimension/Measure,can be the basis of other group.
+Set-Fixed(Manual) or Dynamic,In/Out,Dimension,Can be the basis of other set.
+
+Logical Conditions can be applied on set.
+
+-----------------
+Bins- U can bin the data only for the relational dataset. Binned fields cannot be used in claculations.
+
+Create a histogram from binned dimension-
+Click the sales(bin) dimension in the datapane and choose convert to continuous.
+Drag the sales(bin) dimension fromthe datapane and drop it on the columns shelf.
+Drag the original Sales field from the measure area of datapane and drop it on the rows shelf.
+Click sum(sales) on rows and change the aggregation from sumto count.
+
+
+=================================================================AV==============================================================================================
+
+So,here we will be learning about-introduction to visualization,tableau interface,getting started in tableau,different types of charts,
+and other relevant functionalities.
+
+What data visualization is and why we should use it?-In a data science lifecycle, we canuse visualization not only for exploratory part but also at other part
+of data science life cycle
+
+Data visualizaion is therefore,the ability toturn data into visible and tangible insights that people can intutuively undertand.
+It helps us to explore data,analyze the data then to present the data
+
+Understanding tableau-- Tableau desktop----
+
+connect,open---the sample workbooks are good learning resources.
+
+go todata source-- word indicators--tableau automatically populates this as we load the data. 
+
+Click sheet1-- We have main menu bar at top.. next line is a ribbion..on the left hand side we hve dimensions and measures. These are autopopulated by tableau
+once we load the sheet.Now,there might be a time when tableu misunderstands the variable and classify dimension as measure,so we will need to work on that.
+
+then show me part -- ctr+shift+1--- for show me chart---
+
+Now,taking some variables and seeing how show me chart works--
+
+press shift---keep pressing-- select region from left which is dim and inside population->birth rate which is measure---- tableu is highlighting few charts 
+that will go  best
+
+Importing Sample-Superstore.xls--now we are only going to workwith orders-- so drag orders on drag sheets--but the first few rows looks different--
+
+click use interpreter--- click on it to get cleaned view---
+now,if you open the excel file--u will see some metadata in it-- ifu wish to see exact changes it made--clickon review the results and choose the orders tab--
+and goto worksheet---
+
+dimensions--these are the fields that you cannot aggregate.These are generally string values or discrete values and are mostly used as col or row headings
+e.g. country name,product name,etc
+measures-these are the fields that u can measure or aggregate.These are generally numerical valus or continuous and are mostly used as plotting values..
+eg country population,product sales,etc.
+
+
+n
+
+
+Shelves---visualization in tableau is possible through dragging and dropping measures and dimensions onto these different shlves.--page shelf,
+filter shelf,marks shelf,rowsand col shelf.
+
+row and col shelf represent the x-and y-axis of our graphs/charts
+filter shelf -helps u view strained version of our data.For ex instead of seeing combined sales of all categories,u can look at specific one, such as just furniture
+
+pages shelf- works on the same principal as filters, with the difference that you can actually see the changes as you shift between the paged values
+
+marks shelf--it is used to control mark types of data.U can choose to represent your data using different shapes,sizes  or text.
+
+show me-- as u drag and drop fields ontovisualization area, tableau make default graphs foryou, but u can change these by referring to show me option.
+
+note every graphis made with the combination of dimensions and measures only.
+
+drag measure names into central empty area---------------------- there will be a text table
+measure names will be displayed automatically on rows---------drag it to col
+since,we donot need measures like rowid,discount etc, drag them off from below the marks pane
+
+Now,the colors here are----blue means discrete and green means continuous
+
+Now,getting sales and profit values,sogetting sales and profit values over the years..
+1. drag order date from dimensions and sales from measures to rows
+2.right clickon the green sales pill,select discrete in place of continuous, since we want the explicit values and not the bar graphs
+3. finally drag profit on text or abc col
+
+
+Now,getting monthly sales and profit values,sogetting sales and profit values over the years..
+1. drag order date from dimensions-- change the format from year to month  and sales from measures to rows
+2.right clickon the green sales pill,select discrete in place of continuous, since we want the explicit values and not the bar graphs
+3. finally drag profit on text or abc col
+
+
+Now,learning line charts----
+
+Sales and Profit Growth---
+
+drag order date in col,sum(sales),sum(profit) in rows and sum(sales),sum(profit)
+
+
+next exploring pie chart and demograpic chart--
+wht arethe states that have highest sales revenues and which ones are generating maxi profits--
+
+drag region on rows and sales onto cols
+go to show me and select the pie chart
+drag sales over the markspane on label, size and text
+
+this tells east and west are quite ahead
+
+mapplot---it is advisable to plot geographical data on a map to get better insights
+
+1. drag states onto empty area,then profits onto empty  area--- this is a symbol map,we need to convert it into a filled  one--- go to show me and select filled map
+2. drag profits again,onto labels in marks pane
+
+Clifornia and newyork are the top most sellers from east and west region. There are other states such as texas,colorado, which even after having good sales have 
+negative profits
+
+# scatter plot--drag saleson rows,profit on cols-- the tiny circle represents total sales and profit values, drag states onto graph created-- these circles
+or bubbles represent individual state. To better understand cntral tendency of data u can add median axis as reference line.Just right clickon sales and profit
+axis--- add reference line-- choose median over default avg line.Finally, for more insight drag states on label in the marks pane.
+
+Following findings from this scatter chart---the states in the top right, with high sales and high profits means good business for the organization
+States with positive sales and profits, but near the two respective axis are the ones where there is some scope of improvement.
+Where as th states that belongs to 2nd and 3rd quarters are the ones which are not generating much revenue.
+
+Filters-------------
+
+Till now we have made charts, which provide cumulative data over the lifetime of superstore. Tolook at sales of particular year,month for a certain product
+or toview different aspects of data,filters are the way to go.
+The visual here is an accumulation of all 4 years of data,for all region,states,category and sub-cartegories.
+
+Peak Sales And Profit Months---dothe changes-- drag year order date tofilter'sshelf--pop up will come---select years---next---click all 4---ok-- right click--
+show filer---go to filter and right click-- u can change filter and select slider--
+
+
+Trend line---
+
+copy Peak Sales And Profit Months and paste intonew sheet---renaming to analyzing sales trend--
+ 1.goto show me and choose dual combiation chart---- to get the trend line--- goto analyticson top left---drag trend line over chart
+
+-----------------------now going to tableau2.0-------------------------------
+
+4 key elements that go into designing any effective visualization-- 1 data, 2 design,3 story 4 business intution
+
+tableau quickly converts our thoughts into visualizations.Its interface isone of the best to work with.Interactivity--u can click on dashboards to answer questions.
+It can connect to 67 different sources.Their adaptibility-- tableau includes text and speech search in range of products. Then tableau community--
+
+tableau vs microsoft powerbi
+tableau vs cliq
+
+Tableau isn't a 1 software but a multi-headed suite of tools offering different features and capabilities. It has tableau desktop,tableau prep,tableau online,
+tableau server,tableau public-- if your trial version is expired then go with tableau public.
+
+tableau desktop is what we will use forour course. 
+Tableau prep is a data preperation tool to clean and shape our data. It has 2 products--tableau prep builder which helps build dataflow and tableau prep conductor-
+which isused for scheduling,monitoring and managing flows across the organization.
+
+tableau server and tableau online-- server helps us share the dashboard with the user seamlessly. It allows to connect to any data source,both in premise
+and in cloud.Flexible deployment. If u want sharing and collaboration features oftableau server without wanting tospend resources on managing server,
+then go for tableau online. Its a fully hosted solution with no hardware or server setup required.
+
+tableau public--its a free tool with alot of tableau desktop features packed in. Everything we make goes into tableau public gallery . Its a good way to showcase
+your workto tableau community.
+
+----installing tableau desktop----
+goto tableau.com---products---tableu desktop---try it for free---put your email-id---download free trial---it automatically detects our systemconfiguration--
+once file is downloaded --- select it and double click it--install--u can click or unclick the 2nd option--im selecting 1st click only.
+
+tableau public---if desktop free trial days ended-- tableau public isyour saviour---public.tableau.com---input email id--click download app---
+once installation file is downloaded---click it--install--u can click or unclick the 2nd option--im selecting 1st click only.
+
+
+Horizontal bar cahart---put sales on rows-- click on T in top ribbion--- put category on cols---swap rows cols in home ribbion
+
+Now,understanding how subcategories are doing in termsof sales numbers.. 
+
+
+Subcategory Sales--------rows--subcategory cols---sales----------- select entire view from top ribbion---T on top ribbion---another way of bringing this is--
+-- drop sales on under the marks section and drop it on label card--u can explore sum(sales) here, by just clicking also by right clicking and select format option
+---pane is the one u want towork with and axis is the one for xand y axis--
+u can also click on tooltip--change sales to total sales- now when u will hover ur mouse,u can see-- lly u can chang tooltip again--
+This shows the Total Sales for <Sub-Category>: 
+Sub-Category:	<Sub-Category>
+Total Sales:	<SUM(Sales)>
+
+color------------------------if we want colors to differ from bar to bar---drop subcategory into color---but we can make tis more interesting--so remove subcategory
+now we are going to introduce 3rd variable--drop profit onto colors--the darker the shade of blue--morer profitable that subcategory.
+u can edit colurs-- use red green diverging
+
+Building pivot---------------- Sales Profit by State sheet---
+drag and drop category and sub-category in rows.Now we want the sales number foreach category and sub category--drop sales on the table in whitepane or
+ tomarks under label cart--- sorting from high to low-- Now does it make sense to comapre chair sales to labels sale,instead within each subcategory we can 
+compare like table with furnishings.
+Now,lets say we leaders team wantsto know these numbers for individual state--drop staet into filters---use all-- nowfor showing filter onto sheet---
+right clickon state under filter and select show filter--- but this is a visual clutter---so go on filter showing on right--drop down-- single value(drop down)
+
+Now, if the team asks to include profit foreach subcategory as well---------put profit in filters section---select sum and click next---right click on profit
+filter-- show filter--drop profit on labels card--now profit is added to table
+
+
+Exporting tableau worksheet--------and put them into report or powerpoint presentation--
+goto subcategry sales and profit chart--just right click anywhere on the visualization-- copy --image--copy--lets say in agoogle doc-- paste it there---or ---
+in rich text document--
+
+For exporting into power point--file--export as power point---
+
+Different chart types in tableau------------------
+
+Forecasting data that deals with time---Timeseries forecasting--like population growth,temperature change,website traffic,etc-by line charts--
+
+Now,in orderstable,search fortt component which have dates datatype in them--order date,ship date--analysing sales over time--
+select order date first-- keep pressing control--select sales--in show me -- going with the recommended chart---so much empty space--entire view--
+now here we have sum of sales per year for superstore--clear increase from2017--
+
+understanding sales by month-- clickon + sign of year--we got quarter--click + sugn--get month---but the view is not very good--drop year and quarter-
+now if we see x-axis-- we have sales month but which year?tableau summed up month for all 4 years , putted in a bucket and plotted--
+so go back to month on columns-right click--selct month option--- now there are 3 months that arespiking our sales-- septem nov and dec---and they can figure out
+what to do next--now lets say we want to check sales of 2 sub-categories over time--so using filter and colour functions--drop subcategory onto filters--
+right cick-- select chairs,furnishings and tables--ok--- drag and drop subcategories again to colourmarks--chairs are the best selling items---
+
+Generating map for geospatial analysis----organizations collect infointhe formof rowsand cols--typical spreadsheet where we see latitude,longitude---
+geospatial  analysis do locaion based analysis--ex use in sales and marketing,transportation and logistics,situational intelligence,etc
+
+state variable--we willlook at sales,profit and even quantity by state-----measurevalues by state sheet---select sate and sales variableand open show me--
+double click on recommended one--world map--rightclick on white pane-- edit locations---country/region-- from fields---ok--- clickon the drop down under marks---
+select maps--now sales is shown as size--dropsales and put sales into colour--head to right---from drop down select edit colors---green and blue diverging---
+
+now analyzing profits per state==soremove sales from marks and drag profit into colors card---dark green shows high profit---
+
+analyzing quantity per state toget sense of order nubers per state--remove profit drag quantity and put in colors--
+
+bar,histogram,scatterbubble,pie--
+
+bar charts are especialy effective when we have data which can be splitted into multiple categories--
+
+subcategory sales sheet---sales in cols subcategory rows-- arrange in decs order--
+
+histogram-bar chart analyses 2 variables,histogram only 1--we will look at amount and freq of quantity at superstore--so select quantity and head to show me--
+select histogram--but quantiy is discrete-- so creating bins--2 is the most common quantiy--followedby 4 and 5
+
+scatterplot--helpsin visualizing relationship between 2 measures--profit to rows ,sales to cols--this shows totalsalesand sum of profits--nowpopulating
+this chart--- drag subcategory into color col--profit and sales foreach subcategory---drop subcategory into filtre---exclude chair,furnishing nd table--ok
+
+bubble chart--visualize relationshipbetween dim and measure--looking at sales per subcatgory--select sales,subcategory--show me--bubble chart---
+now showing ow it can go wrong--replacesubcategory on labels with product name--see disaster---undo what u did-- 
+
+pie chart--we have 3 segments in super store--consumer,corporate and homeoffice--lets see how each one of them does in terms ofsales--select sales and segment--
+
+select pie chart--click entire view--select text button from top--
+
+DualAxis charts-----------------------these are useful when measures are of different scale such as sales and profit-- any continuous variables can be used in
+a dual axis chart--- drag subcategory intocolumn--,drag and drop sales and profit into rows next to each other-converting this intodualaxis-- show me--
+clickon the profit on the row-- select dualaxis---but these axes are of different scales-- so synchronizing axis--clickon the profit axis--select synchronize axis--
+
+now go to marks field--select sales --goto the dropdown-- select bar--now converting profitsinto a trend line--gotto profit in marks--select line
+
+now,introducing date component into picture--date dual axis chart---looking at sales and profit against date---drag and drop sales in rows--drop order date in col--
+
+select profit--dualaxis-- right click profit in whitepane--synchronize axis--
+
+now i dont want it by year-- i want by month---right clickonmonth-- select month
+
+Calculated fields and parameters
+
+---Calculated fields---ceating new features with tableau---i.e.doing feature eng--u can segment data,convert data type,aggregate data,filter results and calc ratios.
+
+Types of calc--basic calc,lod or level of detail epressions,and table calc.
+
+basic calc--- transforms values at data source,visualization
+
+lod or level of detail epressions--- transforms values at data source,visualization but they give more ganular control
+
+transform values atvisualization level.
+
+where,data source means row level calc, and visualization means aggregate level calc.
+
+Que--what is the shipping time for each state.The better the shipping time, the better the supply time.Sowe cn use orderdate and ship date.Creating calculated field.
+
+1 way is in the empty space in measures,click right and create calc field. 2nd way-- clickon analysis on topof your workbook and create calc field.
+
+3rd way-- click on drop down arrow next to dims and click on create calc field.Name it shipping time.Dialogue box opens--click on arrow.search date--datediff,double 
+click,--DATEDIFF('day',[Order Date], [Ship Date]), where order dateand ship date are just dragged over.
+Now,we want to see shipping time for each state--So click shipping time and state--click show me--double click on map-- right click on white pane
+edit locations--fromfield-- ok-apply-- in the marks pane--instead of sum select avg--in the colors on right side--select red green divergence-- then select reversed
+
+Now, adding a threshold value-- to check if the shipping value is ok or needs toimprove--lets say keeping threshold to 3.5--edit colors-- advanced-- center---3.5
+
+The red color is may be becuse thre are huge orders to be deleivered
+
+Which state has highest no.of orders and which has lowest?Calc the avg order value--which is total sales diveded by no. of orders.
+
+create calc measure-num of orders---search countD---put CountD([ordersID]) ,create another measure--avg order value--SUM([Sales])/[Num of Orders]---ok
+Now, creating a quick raw table--drop measure names into rows , then measure names into filter---let avg order value,num of orders and sales and finally drag and 
+drop measure values and drop it into text section
+
+AOV Subcategory---sub categories into rows--calcu measure--furniture segment--
+if [Sub-Category]="Bookcases"
+or  [Sub-Category]="Chairs"
+or [Sub-Category]="Furnishings"
+or [Sub-Category]="Storage"
+or [Sub-Category]="Tables"
+then "Furniture Segment"
+else "Other segment"
+END---------------ok-- now what is the avg value for furniture segment--drag furniture segment to rows--then drag and drop profit into white pane--dec order--
+now, draag subcategory outside-- 
+
+Parameters--Allowing users what they want to see in their visualiztion,i.e. dynamically choosing waht we want to see-
+parameters aredynamic valuesthat can replace constant values in calculations , filters  and reference lines.
+create parameter,open parameter,create calc field using that parameter,apply this calc on the tableau sheet.
+
+
+using parameters to find top n customers of superstore--rows-cust names,cols-sum(sales)--sort high to low---creating a cal field-- call it index--INDEX()--ok
+
+Now, this index is dimension,put it in dim section--dim are discrete,measures are conti---right now index is a continuous variable--
+so-- drag index to rows--clickon drop down arrow of index--select discrete--now we need to make little swap becuse indexis coming afterr customer name--so just switch 
+index infront of cust name--now its time to create parameter-- top 5 customers by sales no. --thats what we want--drag and drop cust name onto filter--go to top---
+at by field-- select create new parameter--now name your parametr and keep in mind this will be visible to your customers-- so-- name Top N Customers--
+allowable values-- all--ok--ok--right click on top n customers--show filter--put 5 there--
+
+Now,another way of creating parameter---go on dropdown near search--create parameters--name-measure values-- now what i want to dois i want to give all my measure
+values tomy stakeholders---data type-string--select list --write all the measures values--like discount,Profit,Quantity,Sales--ok--right click measure values--
+show parameter--now creating new calculated field--NameOfMeassure--now mappingthese 4 values totheir correct measure--right click--show parameter
+now, drag and drop order date into cols--name of measure on rows--
+
+#------------Joining and blending data in tableau----
+
+Joiningis a method for combining related data among common fields in different tables.The result of combining data using a join is a virtual table that is extended 
+horizontally by adding cols of data---data source-- new excel sheet--employee data-- drag and drop name1 and name2
+
+
+
+What is blending---lets say we have exracted data from many sources--like sql,nosql,excel,etc.Now,u will be required to bring all these data sources into 1 view--
+in a tableau workbook--Data blending is a method for combining data frommultiple sources.We can bring in additional info from a secondry source into primary source
+now, in data joining - data comes from a same source--joins the 2 sheets or tables and joins happen at row levels while in blending data comes from multiple sources
+whih are seperate. The results are aggregated to the appropriate level-- new datasource--superstore.xls--d and d orders--head to sheet1--go to data on top of your
+tbleau--clickon new data source-- .tde stands for tableau data extract---this contains data about orders ateach coffee chain across united sates--now head back to
+sheet 30 again-- u have coffee dataset and superstore dataset-- now clickon orders--grab state dim and put into rows--sales into cols--now from coffe sheet--
+grab asles and pu next to sales in cols--blue tickof orders is forprimary tableand orange forsecondry-- state has a blended field means this is a common col--
+
+now, there are around 29 null values because cofee chain is not present in every state in US--so for that just drop all the picked up variables--
+take states variable from coffee chain--put into rows--sales fromcof into cols--,goto superstore put sales into cols--from marks pane-select area chart
+next merge 2 charts into 1--so right click on the rhs axis chart
+
+Dashboards--------------------A dashboard is a visual interface that provides multiple views of KPI for a business or a process.
+
+We want to show different aspects of sales -- sales by category,sales over the 4 years,sales by state,sales by city--category sales--rows category,col sales
+
+sales over tim--rows sales-col monthorder date -- color cart order date
+
+sales in state-- select sales and state--showme-- select graph--edit locations--country/region--fromfield--  sum sales on colr
+
+city sales--select city and sales--click on graph in show me--  dand d state to color card---
+
+new dashboard--size-automatic--drag and drop category sales,and other 3 graphs--- removing sales from rhs--
+we will make sales on rhs floting--right click-- select floating--
+
+new sheet in tableau--drag and drop cols sales-- and rows subcategories-- now create anew parameter--Sales/Profit--then show parameter---then create calculated field--
+--2in1--
+case [Sales/Profit]
+when "Sales" then [Sales]
+when "Profit" then [Profit]
+END
+step 4 is applying calculated field ina sheet---remove sales from col and put 2in1 parameter.
+
+Now applying this to dashboard--go to more options of any of graph in white pane--more--parameters--2in1--now in allthe 4 sheets used put 2in1 instead of sales
+
+
+how to upload your work to tbleau gallery---tableau desktop--->server--->tableau public-->save totableau public--- if error comes=--- go to data on top---
+select orders(sample superstore)---extract--- after that try to save on tableau public
+
+Working with multiple dashboards intableau---we will interlink multiple dashboards can navigate betweeen these dashboards--the superstore wants to optimize its
+sales process--
+blueprint for our dashboards--our fisrt dashboard will see sales number per state i.e. state sales our primary dashboard---then we will design 2 dashboards--
+subcategory sales : trend/forecast sales and second- sales forecasting using exponential smoothing,we will also use a back button to go back to primary dashboard
+
+we also want a detailed report that shows us sales no. per state and so on in a pivot like format.this has back button too.The communication between all of them
+is 2 way .
+
+State Sales--press staet and sales --map-- put sum(sales) into colors -- now secondry dashboard has 2 charts--1 sales across subcategories--
+sales cols,subcategories rows--Now click on new worksheet--here we are going to do salesforecast based on the salesvalue that we have--d andd orders into cols
+and sales intorows-- entire view-- we want month by month analysis--now getting trend lines intoplay---goto analytics on top left--grab trend line -- drop into linear
+
+next we want sales forecast-grab and put into forecast button and not anywherre else-- now creating a back button--create new sheet callit back-- create calc field--
+back--"Back"--drag and drop this into your labels cart--now we want to tell this back button toperform action and we want user toknow via tooltip where we will go--
+click tooltip-- write Click here to go back to Primary Dashboard--ok
+now opening a new sheet--order date in col,states and subcategories in rows-- nowd and d sales no.in white pane,quantiy and discount--- drag sales above discount from
+marks pane--we want years above labels--so in cols--grab years before measure names--
+
+now creating a new dashboard--Primary dashboard---state sales--make floating legend--nowif u click text itwill give no.but we want staet names-- so--goto state sales--
+-- drag state names onto labels--
+now going to secondary dashboard--d and d subcategory sales,salesforecast--click on floating down left--d and d back on dashboard-- now hide back title-- make it 
+floating-- now we will make actions--dashboard on top--actions--apply filter---name Click here to go to Secondry Dashboard--unclickback button-- ok--ok
+
+now,making the back button dynamic---go to secondary sheet--dashboard--actions--add filter--name it Back--in top keep clickon back rest unclick--this time run
+action on select not menu--click select---ok--ok--
+now creating new dashboard fordetailed report---d an d detailed report--resize it-- drag and drop back button--dashboard--add actions-- filter--unclick detailedreprt
+--connecting primary dashboard to detailed report dashboard--add action on primary dashboard--name Click here to goto Deatiled Report--unclick back--
+
+now goto secondary-- go to subcategory sales--put state into details--now in sec dash in garph titl add for <State>-- done--
+
+Establishing a framework for storytelling--storytelling helps break down complex numbers and transform theminto easy toundersatnd digestible information and anlysis.
+
+villain - noclear insight into how regions are doing in terms of profits
+victim-superstore's sales strategy and revenue,hero-- a structured storyboard that analyses these numbers to drill down into each region's perofrmance
+
+Profits by region analyisis using storyboard in tableau--
+
+select state-profit-- do the processing---now region is a string type and country is geospatial type--so if we will put region and profit, it will show bar chart
+so droping region ino filters--and do processing--Region Profit
+Now, we will explore regions granually to show how individual regions are doing-- d n d profit to col, segment torows--Segment Profit
+
+New sheet--Category Profit--col profit, rows sales--
+create dashboard-- put all 3 sheets--make profit on right floating--- now putting filters across all your worksheets--make region filter to all--
+go to 1st sheet--click on region filter--right click--apply to worksheets--all using this data source----------Region Profit Dashboard-------
+
+
+now click on new story--put layout to automatic--drag and drop dashboard into white pane--at the top we have story and layout--naviator style--i.e. what we want at
+the top of storyboard---comment--Overall Profits for Superstore across USA--------------new story point-- blank--- d and d dashboard again--now we will do region
+by region analyisis---lets say central--- illinois and texas--furniture is in loss---next duplicating our story---for south and west--now applying annotations--
+
+clicking on furniture because mostly its in loss-right click annotate--mark--delete everything and write Furniture category is in losses---- 
+
+
+
+  
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+    
+   
+
+
+
+ 
