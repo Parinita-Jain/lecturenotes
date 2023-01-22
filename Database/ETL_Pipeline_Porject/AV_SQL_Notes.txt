@@ -1,0 +1,52 @@
+We can do indexing in mysql..and there are 2 things to remember..first it is has tobe done on one col at a time.Is the querry to search becomes fast
+on whichever colyou have indexed.
+
+For,eg. if we doindexing on id field... sowe can dolike... select * from players where id>=20;it will be very quick.. because it won't scan entire table,
+but just id.The thing here tonote is if we have indexing on nae,then we can do ver fast querying on name,like selecting name like Anna or doing some regexp.
+but it wont give fast queries on other cols.
+
+Now,because I can make searching faster with indexing, thenI can make allthe cols index,the problem is the more you do indexing,the more your insertion time
+increase. Also,themore u do indexing,the more space it takeson your hard disk annd ram.
+
+in workbench----------------------------------------
+
+
+create database fifa19;
+use fifa19;
+create table players(
+id int,
+name varchar(30),
+age int(3),
+nationality varchar(255),
+overallrating int,
+potentialrating int,
+club varchar(255),
+value int,
+wage int,
+preferredfoot enum('Left','Right'),
+jerseynumber int,
+joined date,
+height varchar(10),
+weight int(3),
+penalties int(3)
+);
+
+in shell--------------------------------------------
+
+# mysql -u root
+
+MariaDB [(none)]> use fifa19;
+
+MariaDB [fifa19]> load data local infile "C:/Users/itvedant/Documents/Parinita/Database/AV/fifa19.csv" into table players columns terminated by "," optionally enclosed by "'" ignore 1 lines;
+
+#################-----------Advanced queries-------------
+
+# which jersey no.is the luckiest?
+
+# here wee first need toknow what lucky means-- is it the players who wear this get highest wage,or they have highest rating or highest market value?
+
+# so being lucky is subjective and giving ans is also subjective,but we need to find ans,so in such cases,u assume something and try tofind the ans,
+also inform these assumptions to stakeholders.
+
+# lets say we assume,the player who wear tis no.has the highest total wage.
+  
